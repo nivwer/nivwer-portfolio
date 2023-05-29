@@ -1,0 +1,172 @@
+{% extends 'layout.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="container_header position-fixed row align-items-center bg-black z-0">
+    <div class="container-md">
+        <header class="text-center">
+            <div class="row justify-content-center p-3">
+                <div class="col-md-4">
+                    <img src="{% static 'portfolio/spider-icon.svg' %}" alt="" class="img-fluid user-select-none" style="pointer-events: none;">
+                </div>
+            </div>
+            <div class="row justify-content-md-center p-3">
+                <div class="col-lg-6 user-select-none">
+                    <h1 class="font_rock_salt">I am <strong>Nivwer</strong></h1>
+                    <h3>Programmer Backend Developer.</h3>
+                    <p class="text_gray">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    <a href="{% static 'portfolio/cv.pdf' %}" class="btn btn-dark btn-lg rounded-0 my-3">Download CV</a>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <img src="{% static 'portfolio/cat-154642.svg' %}" alt="" class="img-fluid object-fit-cover user-select-none">
+            </div>
+            <div class="position-fixed bottom-0 start-50 translate-middle-x p-4">
+                <a class="nav-link" href="#projects"><i class="bi bi-chevron-down text-light fs-3"></i></a>
+            </div>
+        </header>
+    </div>
+</div>
+
+
+
+<div id="projects" class="container_cards bg_dark-gray sticky-lg-top z-2">
+
+
+    <div class="container p-4">
+        <div class="row my-4 text-center user-select-none">
+            <h3 class="font_rock_salt">My projects</h3>
+            <p class="text_gray">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+
+            {% for project in projects %}
+            <div class="col-md-4 p-2">
+                <div class="card bg_black card-project">
+                    <img src="{{project.image.url}}" alt="{{project.title}}" class="card-img-top object-fit-cover image_card">
+                    <div class="card-body">
+        
+                        <h2 class="font_rock_salt fs-6 text_gray ">{{project.title}}</h2>
+                        <p>{{project.description}}</p>
+        
+                        {% if project.url %}
+                        <a href="{{project.url}}" class="btn btn-dark bg_black btn-sm rounded-5" target="_blank"><i class="bi bi-github w-25 p-2 fs-4 text_gray"></i></a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %} 
+        </div>
+        <div class="position-absolute bottom-0 start-50 translate-middle-x p-4">
+            <a class="nav-link" href="#about"><i class="bi bi-chevron-down text-light fs-3"></i></a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div id="about" class="container_about bg_black sticky-lg-top z-2">
+    <div class="container p-4">
+        <div class="row justify-content-md-center text-center">
+            <div class="col-md-4">
+                <img src="{% static 'portfolio/cup-of-coffee-icon.svg' %}" alt="" class="img-fluid user-select-none" style="pointer-events: none;">
+            </div>
+        </div>
+
+
+        <div class="my-2 text-center user-select-none">
+
+            <h3 class="text-light font_rock_salt">About Me</h3>
+            <div class="container text-center w-50 my-2">
+                <p class="text_gray">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor ipsam sed tempore totam facere dolorum. Dicta, dignissimos vero nobis aspernatur, quia inventore, autem blanditiis commodi perferendis saepe quasi delectus doloribus.</p>
+            </div>
+            
+            <div class="">
+                <h4 class="font_rock_salt">Skills</h4>
+
+               
+
+    
+
+                <div class="d-flex">
+
+                    <div class="col card">
+                        <div class="card-body">
+                            <h5 class="card-title">Programming languages</h5>
+                            <ul>
+                                <li>Python</li>
+                                <li>html</li>
+                                <li>css</li>
+                                <li>javascript </li>
+                                <li>markdown</li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <div class="col card">
+                        <div class="card-body">
+                            <h5 class="card-title">Programming languages</h5>
+                            <ul>
+                                <li>Python</li>
+                                <li>html</li>
+                                <li>css</li>
+                                <li>javascript </li>
+                                <li>markdown</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col card">
+                        <div class="card-body">
+                            <h5 class="card-title">Frameworks and Libraries</h5>
+                            <ul>
+                                <li>django</li>
+                                <li>bootstrap</li>
+                                <li>react</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col card">
+                        <div class="card-body">
+                            <h5 class="card-title">Database</h5>
+                            <ul>
+                                <li>sql</li>
+                                <li>sqlite3</li>
+                                <li>mysql</li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <div class="col card">
+                        <div class="card-body">
+                            <h5 class="card-title">Tools</h5>
+                            <ul>
+                                <li>git</li>
+                                <li>bash</li>
+                                <li>docker</li>
+                                <li>vsc</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="position-absolute bottom-0 start-50 translate-middle-x p-4">
+            <a class="nav-link" href="#footer"><i class="bi bi-chevron-down text-light fs-3"></i></a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+{% endblock %}

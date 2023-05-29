@@ -1,0 +1,73 @@
+.font_rock_salt {
+    font-family: 'Rock Salt'
+}
+
+.bg_dark-gray{
+    background: #090909
+}
+
+.bg_black {
+    background: #000
+}
+
+.text_gray {
+    color: #828282;
+}
+
+.container_header {
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+}
+
+.container_cards {
+    margin: 0;
+    padding-top: 56px;
+    margin-top: 100vh;
+    width: 100vw;
+    min-height: 100vh;    
+}
+
+.container_about {
+    margin: 0;
+    width: 100vw;
+    padding-top: 56px;
+    min-height: 100vh;
+}
+
+.container_footer {
+    margin: 0; 
+    width: 100vw;
+    padding-top: 56px;
+    min-height: 50vh;
+}
+
+.image_card {
+    height: 160px;
+}
+
+.image_detail {
+    width: 35vw;
+    max-height: 700px;
+    min-height: 300px;
+    max-width: 700px;
+    min-width: 300px;
+}
+
+
+
+.card-project:hover {
+    cursor: pointer;
+
+}
+
+
+@media (max-width: 991px) {
+    .container_cards,
+    .container_about {
+        position: relative;
+    }
+    
+}
+
